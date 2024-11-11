@@ -61,7 +61,7 @@ df = df[:1]
 st.write(input_df)
 # Reads in saved classification model
 
-load_clf = pickle.load(open('random_forest_model.pkl', 'rb'))
+load_clf = pickle.load(open('Random_forest_model.pkl', 'rb'))
 
 
 
