@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-import sklearn
+
 
 
 st.write("""
@@ -60,14 +60,12 @@ df.columns = df.columns.str.replace('.0', '', regex=False)
 df = df[:1] 
 
 st.write(input_df)
-# Reads in saved classification model
+
 
 load_clf = pickle.load(open('Random_forest_model.pkl', 'rb'))
 
 
 
-
-# Apply model to make predictions
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
 
